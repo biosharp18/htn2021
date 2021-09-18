@@ -21,10 +21,32 @@ app.get('/', (req, res) => {
 })
 app.post('/submit', (req, res) => {
 //NEED TO REDIRECT
+//console.log(req.body) //you will get your data in this as object.
+    res.cookie("context", req.body.name, { httpOnly: true });
+    req.body.room = req.body.room.toUpperCase()
+    res.redirect(req.body.room)
 })
+app.get('/:room', (req, res) => {
+    const context = req.cookies["context"];
+    res.clearCookie("context", { httpOnly: true });
+    res.render('room', { roomId: req.params.room, name: context })
+    //console.log(req.params)
+  })
 
 io.on('connection', socket => {
+    socket.on('join-room', (roomId, userId) => {
+
+        io.emit("new-user", {name: socket.id}) 
+        socket.join(roomId)
+        socket.to(roomId).broadcast.emit('user-connected', userId)
+        socket.on('disconnect', () => {
+          socket.to(roomId).broadcast.emit('user-disconnected', userId)
+        })
+        
+        
   
+    
+      })
     
   })
 
