@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Fira+Sans:ital,wght@0,500;0,600;0,700;1,700&display=swap');
+
+body {
+  margin: 0;
+  background-color: #FBBB4C;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 600;
+}
+#home-body {
+  background-image: url('../images/background.png');
+  background-size: cover;
+}
+h1 {
+  font-family: Fira Sans;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 12vh;
+  line-height: 85%;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5vh;
+}
+#home-title {
+  text-align: left;
+}
+#logo-icon {
+  width: 10vh; 
+  margin-bottom: -6vh;
+  display: block;
+}
+main {
+  padding: 5%;
+}
+#video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 30vh);
+  grid-auto-rows: 30vh;
+  column-gap: 4vh;
+  row-gap: 4vh;
+  /* border: red solid 1px; */
+  margin-bottom: 5vh;
+}
+#progress-title {
+  margin-top: 0;
+  font-weight: 700;
+}
+.video-box {
+  /* border: red solid 1px; */
+  display: inline-block;
+}
+.video-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 15px solid black;
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.25);
+}
+.video-box p {
+  font-size: 30px;
+  margin-top: 10px;
+}
+button, input, #room-code-display {
+  border: 10px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 14px 14px 30px 10px rgba(0, 0, 0, 0.25), 10px 10px 0 #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: auto;
+}
+
+input[type='submit'] {
+  font-size: calc(7vh - 1vh);
+}
+
+button:hover {background-color:  #d4771f}
+
+button:active {
+  background-color: #d4771f;
+  box-shadow: 0 5px #000000;
+  transform: translateY(4px), translateX(4px);
+}
+button, input {
+  background: #FC9434;
+  width: 20vw;
+  height: 10vh;
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 7vh;
+  line-height: 72px;
+}
+
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  border: 10px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 14px 14px 30px 10px rgba(0, 0, 0, 0.25), 10px 10px 0 #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #FC9434 !important;
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 72px;
+  font-size: 7vh;
+  color: black;
+  /* float: right; */
+  /* clear: right; */
+  width: 30vw;
+  border-radius: 0px;
+  outline: none;
+}
+
+input[type="text"] {
+  background: white;
+}
+::-webkit-input-placeholder {
+  color: #ddd;
+}
+input:focus {
+  outline: none;
+}
+#start-game, #my-turn button {
+  float: right;
+  clear: right;
+  width: 30vw;
+}
+
+#container{
+  top: 0;
+  bottom: 0;
+  position:absolute;
+}
+
+#start-game-div, #prompt-button {
+  /* border: red solid 1px; */
+  float: right;
+  clear: right;
+  margin: 0;
+}
+#roomCode, #nameID {
+  text-transform: uppercase;
+}
+#room-code-display {
+  background-color: white;
+  display: inline-block;
+  width: 15vw;
+  height: 15vh;
+}
+#below-videos {
+  /* border: red solid 1px; */
+  margin-top: 6vh;
+}
+#room-code-display h2 {
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 5.5vmax;
+  margin: auto;
+}
+#room-code-group, #join-instructions {
+  display: inline-block;
+  /* border: red solid 1px; */
+  vertical-align: top;
+  margin-right: 50px;
+}
+#join-instructions p {
+  margin: 0;
+  font-size: 20px;
+}
+#join-instructions h2 {
+  font-size: 3vh;
+  font-weight: 700;
+  margin: 3px 0 7px 0;
+}
+#room-code-group h6 {
+  font-size: 30px;
+  margin: 20px 0 0 0;
+  text-align: center;
+}
+.progress {
+  box-shadow: 14px 14px 30px 10px rgba(0, 0, 0, 0.25), 10px 10px 0 #000000;
+  outline: 10px solid #000000;
+  height: 5vh;
+  outline-offset: -10px;
+  /* -moz-border-radius: 0px;
+  -webkit-border-radius: 0px; */
+  border-radius: 0px;
+  margin: 0 auto;
+  /* margin: 10px; */
+}
+#progress-bar {
+  background-color:#FC9434;
+  border-radius: 0px;
+}
+
+#results-header{
+  font-size: 12vh;
+  font-weight: bold;
+  margin:auto;
+  text-align:center;
+}
+
+#results{
+  margin:auto;
+  text-align:center;
+}
+
+#timer{
+  font-size: 12vh;
+  font-weight: bold;
+  text-align:center;
+  margin:auto;
+}
