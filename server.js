@@ -22,3 +22,18 @@ app.get('/', (req, res) => {
 app.post('/submit', (req, res) => {
 //NEED TO REDIRECT
 })
+
+io.on('connection', socket => {
+  
+    console.log('hello world')
+  })
+
+
+
+
+
+
+
+
+PORT = process.env.PORT || 3000
+server.listen(PORT, () => console.log(`server running on port ${PORT}`))
