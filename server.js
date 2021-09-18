@@ -25,7 +25,7 @@ app.post('/submit', (req, res) => {
 
 io.on('connection', socket => {
   
-    console.log('hello world')
+    
   })
 
 
